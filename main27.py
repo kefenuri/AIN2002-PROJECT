@@ -80,7 +80,7 @@ test_data_copy = test_data.copy()
 test_data_copy[categorical_features] = encoder.transform(test_data_copy[categorical_features])
 
 # Remove the target variable from the test set
-X_test = test_data_copy.drop('stroke', axis=1)  # Replace 'column_name' with the actual column name in the test dataset
+X_test = test_data_copy.drop('stroke', axis=1)  
 
 # Scale the numerical features in the test set
 X_test_scaled = scaler.transform(X_test)
